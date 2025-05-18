@@ -18,7 +18,7 @@ export default function FinanceBar() {
   useEffect(() => {
     const fetchFinanceData = async () => {
       try {
-        const response = await fetch("/api/finance")
+        const response = await fetch("https://news-portal-backend-4.onrender.com/api/finance")
         if (!response.ok) {
           throw new Error(`Failed to fetch finance data: ${response.statusText}`)
         }
