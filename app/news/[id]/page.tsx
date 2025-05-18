@@ -26,7 +26,7 @@ export default function NewsDetail() {
   useEffect(() => {
     const fetchNewsDetail = async () => {
       try {
-        const response = await fetch(`/api/news/${id}`)
+        const response = await fetch(`https://news-portal-backend-4.onrender.com/api/news/${id}`)
         if (!response.ok) {
           throw new Error("News not found")
         }
