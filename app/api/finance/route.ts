@@ -3,7 +3,7 @@ import { fallbackFinance } from "@/lib/fallback-data"
 
 export async function GET() {
   try {
-    const response = await fetch("http://localhost:8081/api/finance", {
+    const response = await fetch("https://news-portal-backend-4.onrender.com/api/finance", {
       next: { revalidate: 300 },
     })
 

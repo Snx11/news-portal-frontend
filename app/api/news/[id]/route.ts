@@ -6,7 +6,7 @@ export async function GET(request: Request, { params }: { params: { id: string }
 
   try {
     // Try to fetch from the backend with updated port 8081
-    const response = await fetch(`http://localhost:8081/api/news/${id}`, {
+    const response = await fetch(`https://news-portal-backend-4.onrender.com/${id}`, {
       next: { revalidate: 60 }, // Cache for 60 seconds
     })
 

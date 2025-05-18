@@ -55,7 +55,7 @@ export async function DELETE(request: Request) {
 
   try {
     // Try to delete from the backend with updated port 8081
-    const response = await fetch(`http://localhost:8081/api/history?userId=${userId}`, {
+    const response = await fetch(`https://news-portal-backend-4.onrender.com/api/history?userId=${userId}`, {
       method: "DELETE",
     })
 

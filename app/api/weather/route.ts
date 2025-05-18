@@ -7,7 +7,7 @@ export async function GET(request: Request) {
 
   try {
     // Try to fetch from the backend with updated port 8081
-    const url = city ? `http://localhost:8081/api/weather?city=${city}` : "http://localhost:8081/api/weather"
+    const url = city ? `https://news-portal-backend-4.onrender.com/api/weather?city=${city}` : "hhttps://news-portal-backend-4.onrender.com/api/weather"
 
     const response = await fetch(url, {
       next: { revalidate: 3600 }, // Cache for 1 hour
