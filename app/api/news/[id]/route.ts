@@ -6,7 +6,7 @@ export async function GET(request: Request, { params }: { params: { id: string }
 
   try {
     
-    const response = await fetch(`https://news-portal-backend-4.onrender.com/api/news/${id}`, {
+    const response = await fetch(`https://news-portal-backend-4.onrender.com/api/news`, {
       next: { revalidate: 60 }, // Cache for 60 seconds
     })
 

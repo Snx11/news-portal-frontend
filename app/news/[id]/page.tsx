@@ -43,7 +43,7 @@ export default function NewsDetail() {
         )
 
         // Also add to backend history
-        await fetch("https://news-portal-backend-4.onrender.com/api/history", {
+        await fetch("/api/history", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
