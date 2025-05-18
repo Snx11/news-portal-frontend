@@ -5,8 +5,7 @@ export async function GET(request: Request) {
   const userId = searchParams.get("userId") || "anonymous"
 
   try {
-    // Try to fetch from the backend with updated port 8081
-    const response = await fetch(`http://localhost:8081/api/history?userId=${userId}`, {
+    const response = await fetch(`https://news-portal-backend-4.onrender.com/api/history?userId=${userId}`, {
       next: { revalidate: 10 }, // Don't cache history
     })
 
@@ -28,7 +27,7 @@ export async function POST(request: Request) {
     const body = await request.json()
 
     // Try to post to the backend with updated port 8081
-    const response = await fetch("http://localhost:8081/api/history", {
+    const response = await fetch("https://news-portal-backend-4.onrender.com/api/history", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
