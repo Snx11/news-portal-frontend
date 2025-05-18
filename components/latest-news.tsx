@@ -25,7 +25,7 @@ export default function LatestNews() {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await fetch("/api/news")
+        const response = await fetch("https://news-portal-backend-4.onrender.com//api/news")
         if (!response.ok) {
           throw new Error(`Failed to fetch news: ${response.statusText}`)
         }

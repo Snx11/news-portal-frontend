@@ -28,7 +28,7 @@ export default function WeatherSection() {
 
         // Fetch weather data for each city using our API route
         for (const city of cities) {
-          const response = await fetch(`/api/weather?city=${city}`)
+          const response = await fetch(`https://news-portal-backend-4.onrender.com//api/weather?city=${city}`)
           if (!response.ok) {
             throw new Error(`Failed to fetch weather data for ${city}: ${response.statusText}`)
           }

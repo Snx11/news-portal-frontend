@@ -21,7 +21,7 @@ export default function FinanceSection() {
     const fetchFinanceData = async () => {
       try {
         // Use our Next.js API route instead of directly calling the backend
-        const response = await fetch("/api/finance")
+        const response = await fetch("https://news-portal-backend-4.onrender.com//api/finance")
         if (!response.ok) {
           throw new Error(`Failed to fetch finance data: ${response.statusText}`)
         }

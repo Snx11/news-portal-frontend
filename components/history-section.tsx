@@ -16,7 +16,7 @@ export default function HistorySection() {
     dispatch(clearHistory())
 
     // Also clear history in backend via our API route
-    fetch("/api/history", {
+    fetch("https://news-portal-backend-4.onrender.com//api/history", {
       method: "DELETE",
     }).catch((error) => {
       console.error("Error clearing history in backend:", error)
@@ -41,7 +41,7 @@ export default function HistorySection() {
           <ul className="space-y-2">
             {history.slice(0, 10).map((item) => (
               <li key={`${item.id}-${item.viewedAt}`} className="border-b pb-2 last:border-0">
-                <Link href={`/news/${item.id}`} className="block hover:underline">
+                <Link href={`https://news-portal-backend-4.onrender.com//news/${item.id}`} className="block hover:underline">
                   <div className="flex justify-between items-start">
                     <span className="font-medium">{item.title}</span>
                     <span className="text-xs text-muted-foreground ml-2">
